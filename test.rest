@@ -1,0 +1,8 @@
+@url = http://localhost:3000
+
+### Get all users
+GET {{url}}/users
+
+
+### Get a single user by ID 
+GET {{url}}/users/69f9d514196b1da4bdca8b58

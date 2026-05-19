@@ -1,8 +1,39 @@
-@url = http://localhost:3000
-
 ### Get all users
-GET {{url}}/users
+GET http://localhost:3000/users
 
 
-### Get a single user by ID 
-GET {{url}}/users/69f9d514196b1da4bdca8b58
+### Get a single user by ID
+# Replace the ID below with a valid MongoDB ObjectId from your database
+GET http://localhost:3000/users/69f9d61be17477a825417293
+
+
+### Create a new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@example.com",
+    "favoriteColor": "Blue",
+    "birthday": "1995-05-15"
+}
+
+
+### Update a user (Replace entirely)
+# Replace the ID below with the ID of the user you want to update
+PUT http://localhost:3000/users/65c2f1b8e4b0a123456789ab
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Smith",
+    "email": "johnsmith@example.com",
+    "favoriteColor": "Green",
+    "birthday": "1995-05-15"
+}
+
+
+### Delete a user
+# Replace the ID below with the ID of the user you want to delete
+DELETE http://localhost:3000/users/69f9d61be17477a825417292

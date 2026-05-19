@@ -1,7 +1,9 @@
 const router = require('express').Router();
 
+router.use('/', require('./swagger'));
+
 router.get('/', (req, res) => {
-    res.send('Hello World! Welcome to the home page!');
+    res.send('Hello World!');
 });
 
 router.use('/users', require('./users'));
